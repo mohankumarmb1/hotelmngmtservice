@@ -1,0 +1,34 @@
+spring:
+server:
+  port: 8083
+
+ 
+  datasource:
+    url: jdbc:h2:mem:cb-order-db
+    username: root
+    password: 123
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+  kafka: 
+   consumer:
+      bootstrap-servers: localhost:9092
+      group-id: myGroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+logging:
+  level:
+    org.springframework: ERROR
+    com.example.hotelmgmtservice: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
+  file: hotelmgmt_service.log
+    
+    
