@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.hrs</groupId>
 	<artifactId>hotel-management-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>dev</version>
 	<name>hotel-management-service</name>
 	<description>Hotel management App</description>
 	<properties>
